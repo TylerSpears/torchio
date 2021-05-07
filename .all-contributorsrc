@@ -264,6 +264,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "TylerSpears",
+      "name": "Tyler Spears",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7096950?v=4",
+      "profile": "https://github.com/TylerSpears",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "DaGuT",
+      "name": "DaGuT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7759336?v=4",
+      "profile": "http://dagut.ru",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
