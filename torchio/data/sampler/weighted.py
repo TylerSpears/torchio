@@ -230,7 +230,11 @@ class WeightedSampler(RandomSampler):
         random_number = max(MIN_FLOAT_32, torch.rand(1).item())
 
         # Accumulated floating point errors might make cdf.max() less than 1
-        if random_number > cdf.max():
+        # The cdf is sorted in ascending order, so the last element is always the max.
+        cdf_max = cdf[-1]
+        if random_number > cdf_max:
+            # Add assert statement for safety.
+            assert (cdf.max() == cdf_max).all(), f"cdf.max(): {cdf.max()}, cdf[-1]: {cdf_max}"
             random_location_index = -1
         else:  # proceed as usual
             random_location_index = np.searchsorted(cdf, random_number)
